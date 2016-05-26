@@ -1,6 +1,7 @@
 package api;
 
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
@@ -136,5 +137,12 @@ public interface IPluginManager {
 	 * @return true if it was registered successfully, false if that id already exists for this plugin
 	 */
 	boolean registerTimer(IBotPlugin plugin, int id, TimeUnit time, int units);
+		
+	/**
+	 * Get a list of everyone in chat, accurate up to a set value (default 5)
+	 * @return a {@link List} of usernames of people in chat
+	 * @throws IOException
+	 */
+	List<String> getChatters() throws IOException;
 	
 }
