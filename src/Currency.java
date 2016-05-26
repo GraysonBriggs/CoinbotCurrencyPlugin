@@ -1,3 +1,5 @@
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -46,6 +48,11 @@ public class Currency implements IBotPlugin {
 	@Override
 	public void postInit() {
 		//Do nothing
+		try {
+			ArrayList<String> chatters = (ArrayList<String>) this.manager.getChatters();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
