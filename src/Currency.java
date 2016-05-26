@@ -93,7 +93,7 @@ public class Currency implements IBotPlugin {
 
 	@Override
 	public void onForceShutdown() {
-		// TODO Auto-generated method stub
+		//quickly close resources
 		
 	}
 
