@@ -45,7 +45,7 @@ public class Currency implements IBotPlugin {
 
 	@Override
 	public void postInit() {
-		// TODO Auto-generated method stub
+		//Do nothing
 		
 	}
 
