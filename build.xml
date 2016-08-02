@@ -40,7 +40,7 @@
 			  basedir="bin"
 			  includes="bin/api">
 		   </jar>
-		   <checksum algorithm="md5" format="MD5SUM" file="${distFile}"/> 
+		   <checksum file="${ant.project.name}.jar"/> 
 		</target>
 		<target depends="build" name="create_run_jar">
 				<jar destfile="${ant.project.name}.jar">
