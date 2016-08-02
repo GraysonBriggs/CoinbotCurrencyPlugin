@@ -35,19 +35,19 @@
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-              	<target depends="build" name="build-jar">
-              	   <jar destfile="${ant.project.name}.jar"
-              	      basedir="bin"
-              	      includes="bin/api">
-              	   </jar>
-				   <checksum algorithm="md5" format="MD5SUM" file="${distFile}">
-              	</target>
-              	<target depends="build" name="create_run_jar">
-              	        <jar destfile="${ant.project.name}.jar">
-              	            <manifest>
-              	                <attribute name="Class-Path" value="."/>
-              	            </manifest>
-              	            <fileset dir="bin"/>
-              	        </jar>
-              	    </target>
+		<target depends="build" name="build-jar">
+		   <jar destfile="${ant.project.name}.jar"
+			  basedir="bin"
+			  includes="bin/api">
+		   </jar>
+		   <checksum algorithm="md5" format="MD5SUM" file="${distFile}">
+		</target>
+		<target depends="build" name="create_run_jar">
+				<jar destfile="${ant.project.name}.jar">
+					<manifest>
+						<attribute name="Class-Path" value="."/>
+					</manifest>
+					<fileset dir="bin"/>
+				</jar>
+			</target>
 </project>
